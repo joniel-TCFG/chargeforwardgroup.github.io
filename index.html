@@ -875,6 +875,17 @@ footer {
 @keyframes boltTrace { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
 @keyframes boltTraceTail { from { stroke-dashoffset: 111; } to { stroke-dashoffset: 11; } }
 @media (prefers-reduced-motion: reduce) { .bolt-trace { display:none; } }
+.paths-band { margin-top:28px; display:grid; grid-template-columns:1.2fr 1.6fr auto; gap:28px; align-items:center;
+  background:linear-gradient(135deg, rgba(0,200,255,0.06), rgba(127,255,0,0.05)); border:1px solid var(--border); border-radius:14px; padding:28px; }
+.paths-intro h3 { font-family:'Orbitron',monospace; font-size:16px; color:var(--white); margin-bottom:8px; }
+.paths-intro p { font-size:13px; color:var(--gray); line-height:1.7; }
+.paths-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.path { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 14px; }
+.path strong { display:block; font-size:13px; color:var(--green); margin-bottom:2px; }
+.path span { font-size:12px; color:var(--gray); }
+.paths-cta { white-space:nowrap; text-decoration:none; display:inline-block; }
+@media (max-width: 1024px) { .paths-band { grid-template-columns:1fr; } .paths-cta { justify-self:start; } }
+@media (max-width: 480px) { .paths-list { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -995,6 +1006,20 @@ footer {
       <p>We build you a complete financial picture - incentives available, revenue forecast, and project timeline - completely free, no strings attached.</p>
       <span class="svc-free">✓ No Commitment</span>
     </div>
+  </div>
+  <div class="paths-band">
+    <div class="paths-intro">
+      <div class="eyebrow" style="margin-bottom:10px">Flexible Paths</div>
+      <h3>More than one way to get chargers</h3>
+      <p>From full ownership to options with little or no upfront cost where your site qualifies. We'll show you which path fits your property.</p>
+    </div>
+    <div class="paths-list">
+      <div class="path"><strong>Own it</strong><span>Maximum long-term revenue</span></div>
+      <div class="path"><strong>Finance it</strong><span>Spread the cost over time</span></div>
+      <div class="path"><strong>Start smaller</strong><span>Fewer stalls, expand later</span></div>
+      <div class="path"><strong>Partner-funded</strong><span>For sites that qualify</span></div>
+    </div>
+    <a href="#contact" class="btn-primary paths-cta">Find My Best Path →</a>
   </div>
 </section>
 
@@ -1174,7 +1199,7 @@ footer {
   <div class="faq">
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Does this cost my business anything? <span class="faq-arrow">▼</span></div>
-      <div class="faq-a">Your site assessment and revenue projection are always free. Project costs depend on your site, the number of stalls, and the electrical work required, so before you commit we give you a complete picture: estimated costs, every incentive you qualify for (such as New York's tax credit of up to $5,000 per charger), and projected charging revenue.</div>
+      <div class="faq-a">Your site assessment and revenue projection are always free. Project costs depend on your site, the number of stalls, and the electrical work required, so before you commit we give you a complete picture: estimated costs, every incentive you qualify for (such as New York's tax credit of up to $5,000 per charger), and projected charging revenue. If paying upfront isn't the right fit, we'll also walk you through financing, smaller starting projects, and partner-funded options where your site qualifies.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How long does the process take? <span class="faq-arrow">▼</span></div>
