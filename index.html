@@ -1078,10 +1078,10 @@ footer {
 
   <div class="inc-total">
     <div>
-      <div class="tl">NY State Tax Credit - 8-Stall Installation</div>
-      <div style="font-size:12px;color:var(--gray);margin-top:4px">Up to $5,000 per charger (lesser of $5K or 50% of cost), available through tax year 2028. Utility make-ready funding can add more when available.</div>
+      <div class="tl">NY State Tax Credit - Per Charger</div>
+      <div style="font-size:12px;color:var(--gray);margin-top:4px">Lesser of $5,000 or 50% of cost per charger, available through tax year 2028: up to $20K on a 4-stall site, up to $40K on 8. Utility make-ready funding can add more when available.</div>
     </div>
-    <div class="tv">Up to $40K</div>
+    <div class="tv">Up to $5K</div>
   </div>
 
   <div class="callout" style="margin-top:24px">
@@ -1100,8 +1100,9 @@ footer {
     <div>
       <div class="calc-grp">
         <label class="calc-label">Number of Charging Stalls</label>
-        <input type="range" min="2" max="20" value="8" id="stalls" oninput="calc()">
-        <div class="calc-val" id="stallsV">8 Stalls</div>
+        <input type="range" min="4" max="24" value="4" id="stalls" oninput="calc()">
+        <div class="calc-val" id="stallsV">4 Stalls</div>
+        <div style="font-size:11px;color:var(--gray);margin-top:4px">Tesla's minimum is 4 stalls. One Tesla cabinet powers up to 8, so sites can start small and expand.</div>
       </div>
       <div class="calc-grp">
         <label class="calc-label">Est. Daily Sessions per Stall</label>
