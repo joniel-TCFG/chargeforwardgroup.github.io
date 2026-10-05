@@ -1105,23 +1105,27 @@ footer {
         <div style="font-size:11px;color:var(--gray);margin-top:4px">Tesla's minimum is 4 stalls. One Tesla cabinet powers up to 8, so sites can start small and expand.</div>
       </div>
       <div class="calc-grp">
-        <label class="calc-label">Est. Daily Sessions per Stall</label>
-        <input type="range" min="2" max="12" value="6" id="sess" oninput="calc()">
-        <div class="calc-val" id="sessV">6 Sessions / day</div>
+        <label class="calc-label">Energy Sold per Stall per Day</label>
+        <input type="range" min="100" max="450" step="10" value="250" id="kwh" oninput="calc()">
+        <div class="calc-val" id="kwhV">250 kWh / day</div>
+        <div style="font-size:11px;color:var(--gray);margin-top:4px">Our moderate estimate is 250 kWh, below the ~319 kWh in Tesla's Manhattan example.</div>
       </div>
       <div class="calc-grp">
-        <label class="calc-label">Avg. Revenue per Session</label>
-        <input type="range" min="8" max="22" value="14" id="rev" oninput="calc()">
-        <div class="calc-val" id="revV">$14.00</div>
+        <label class="calc-label">Price Drivers Pay per kWh</label>
+        <input type="range" min="0.35" max="0.70" step="0.01" value="0.50" id="price" oninput="calc()">
+        <div class="calc-val" id="priceV">$0.50 / kWh</div>
+        <div style="font-size:11px;color:var(--gray);margin-top:4px">U.S. fast charging averaged about $0.53/kWh in early 2026.</div>
       </div>
-      <p style="font-size:11px;color:var(--gray);margin-top:8px;line-height:1.6">Estimates are illustrative, based on industry utilization data. Revenue shown is gross — before electricity costs and Tesla's $0.10/kWh network fee. Tax credit shown assumes each stall counts as a separate $5,000 installation, which we're confirming with the NY Tax Department; it could be as low as $5,000 per site. Actual results vary.</p>
+      <p style="font-size:11px;color:var(--gray);margin-top:8px;line-height:1.6">Estimates are illustrative, not a guarantee. Net margin subtracts Tesla's $0.10/kWh fee and about $0.228/kWh for electricity (Tesla's NYC configurator estimate); your actual rate comes from Con Edison. Build cost uses Tesla's configurator (about $470K for 4 stalls, $940K for 8); site-specific utility and installation costs vary. Tax credit shown assumes each stall counts as a separate $5,000 installation, which we're confirming with the NY Tax Department; it could be as low as $5,000 per site.</p>
     </div>
     <div>
       <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gray);text-transform:uppercase;margin-bottom:12px">Your Estimated Results</div>
-      <div class="res-row"><span class="rl">Monthly Gross Charging Revenue</span><span class="rv" id="monthly">$20,160</span></div>
-      <div class="res-row"><span class="rl">Annual Gross Charging Revenue</span><span class="rv" id="annual">$241,920</span></div>
-      <div class="res-row"><span class="rl">Est. NY Tax Credit (up to)</span><span class="rv" id="inc">$40,000</span></div>
-      <div class="res-row big"><span class="rl" style="font-weight:700;color:var(--white)">5-Year Gross Charging Revenue</span><span class="rv" id="five">$1.2M</span></div>
+      <div class="res-row"><span class="rl">Monthly Gross Charging Revenue</span><span class="rv" id="monthly">$15,000</span></div>
+      <div class="res-row"><span class="rl">Monthly Net Margin (after Tesla fee &amp; power)</span><span class="rv" id="mnet">$5,160</span></div>
+      <div class="res-row"><span class="rl">Annual Net Margin</span><span class="rv" id="annual">$61,920</span></div>
+      <div class="res-row"><span class="rl">Est. Build Cost (Tesla est.)</span><span class="rv" id="cost">$470,000</span></div>
+      <div class="res-row"><span class="rl">Est. NY Tax Credit (up to)</span><span class="rv" id="inc">$20,000</span></div>
+      <div class="res-row big"><span class="rl" style="font-weight:700;color:var(--white)">Estimated Payback</span><span class="rv" id="payback">~7.3 years</span></div>
       <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:16px">Get My Full Property Report</a>
     </div>
   </div>
@@ -1252,7 +1256,7 @@ footer {
   <div class="page">
     <div class="eyebrow">Transparent Pricing</div>
     <h2 class="section-title">How We <span class="accent">Get Paid</span></h2>
-    <p class="section-sub">No hidden fees. No surprises. Much of our compensation is tied to your results. Here is the complete picture before you sign anything.</p>
+    <p class="section-sub">No hidden fees. No surprises. Here is the complete picture before you sign anything.</p>
 
     <div class="price-grid-3">
 
@@ -1272,9 +1276,9 @@ footer {
 
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)"></div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Ongoing</div>
-        <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:10px">Revenue Share</div>
-        <div style="font-size:12px;color:var(--gray);line-height:1.65">10% of net charging margin (after Tesla's fee and electricity), starting Month 1 of operation. We only earn when your stalls are profitable.</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Optional · After Go-Live</div>
+        <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:10px">Site-Care Subscription</div>
+        <div style="font-size:12px;color:var(--gray);line-height:1.65">Only if you want it, and cancelable anytime: scheduled site visits, cleanliness checks, reporting any issues to Tesla, and a monthly performance report. Priced per site.</div>
       </div>
 
     </div>
@@ -1294,8 +1298,8 @@ footer {
 
     <div style="background:rgba(127,255,0,0.04);border:1px solid rgba(127,255,0,0.25);border-left:4px solid var(--green);border-radius:10px;padding:22px 24px;margin-bottom:16px">
       <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:10px">The Bottom Line</div>
-      <div style="font-size:14px;color:var(--white);font-weight:600;margin-bottom:8px">You always know what you're paying for, and our long-term earnings grow only when your chargers earn.</div>
-      <div style="font-size:13px;color:var(--gray);line-height:1.7">Flat fees cover setup and the Tesla application. Project management is priced to the size of your project. Our revenue share comes from charging income that did not exist before our partnership, and success fees apply only to incentive funds we actually secure. Pricing is tailored to each engagement — schedule a free consultation to discuss what works for your property.</div>
+      <div style="font-size:14px;color:var(--white);font-weight:600;margin-bottom:8px">You always know what you're paying for, and you never pay ongoing fees you didn't choose.</div>
+      <div style="font-size:13px;color:var(--gray);line-height:1.7">Flat fees cover setup and the Tesla application. Project management is priced to the size of your project. Success fees apply only to incentive funds we actually secure, and ongoing site care is optional. Pricing is tailored to each engagement — schedule a free consultation to discuss what works for your property.</div>
     </div>
 
     <div style="text-align:center">
@@ -1454,19 +1458,25 @@ setInterval(updateCD, 60000);
 // Calculator
 function calc() {
   const s = +document.getElementById('stalls').value;
-  const se = +document.getElementById('sess').value;
-  const r = +document.getElementById('rev').value;
+  const kwh = +document.getElementById('kwh').value;
+  const price = +document.getElementById('price').value;
+  const TESLA_FEE = 0.10, POWER = 0.228, COST_PER_STALL = 117500, CREDIT = 5000;
   document.getElementById('stallsV').textContent = s + ' Stalls';
-  document.getElementById('sessV').textContent = se + ' Sessions / day';
-  document.getElementById('revV').textContent = '$' + r.toFixed(2);
-  const mo = s * se * r * 30;
-  const yr = mo * 12;
-  const incentive = s * 5000;
-  const five = yr * 5;
-  document.getElementById('monthly').textContent = '$' + Math.round(mo).toLocaleString();
-  document.getElementById('annual').textContent = '$' + Math.round(yr).toLocaleString();
-  document.getElementById('inc').textContent = '$' + Math.round(incentive).toLocaleString();
-  document.getElementById('five').textContent = five >= 1000000 ? '$' + (five/1000000).toFixed(1) + 'M' : '$' + Math.round(five/1000) + 'K';
+  document.getElementById('kwhV').textContent = kwh + ' kWh / day';
+  document.getElementById('priceV').textContent = '$' + price.toFixed(2) + ' / kWh';
+  const energy = kwh * s * 30;                 // kWh per month
+  const gross = energy * price;
+  const mnet = energy * (price - TESLA_FEE - POWER);
+  const yr = mnet * 12;
+  const cost = s * COST_PER_STALL;
+  const incentive = s * CREDIT;
+  const fmt = n => '$' + Math.round(n).toLocaleString();
+  document.getElementById('monthly').textContent = fmt(gross);
+  document.getElementById('mnet').textContent = fmt(mnet);
+  document.getElementById('annual').textContent = fmt(yr);
+  document.getElementById('cost').textContent = fmt(cost);
+  document.getElementById('inc').textContent = fmt(incentive);
+  document.getElementById('payback').textContent = yr > 0 ? '~' + ((cost - incentive) / yr).toFixed(1) + ' years' : 'Not profitable at these settings';
 }
 
 calc();
